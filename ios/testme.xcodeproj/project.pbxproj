@@ -691,6 +691,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = C767WZAS5N;
 						ProvisioningStyle = Manual;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -1239,8 +1240,8 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = testme;
-				PROVISIONING_PROFILE = "d510df3e-bf14-44ee-acf7-2259b6e3c218";
-				PROVISIONING_PROFILE_SPECIFIER = RNDemoAppProfile;
+				PROVISIONING_PROFILE = "78365d5e-6645-4883-9135-d91bbff59175";
+				PROVISIONING_PROFILE_SPECIFIER = testme;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
