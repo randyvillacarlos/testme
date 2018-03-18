@@ -25,11 +25,22 @@ const instructions = Platform.select({
 type Props = {};
 export default class App extends Component<Props> {
 
+ constructor(props) {
+   super(props);
+   this.state = { logs: [] };
+ }
  codePushSync(){
+   this.setState({ logs: ['Sync started at ' + new Date()]});
     CodePush.sync({
        installMode: CodePush.InstallMode.IMMEDIATE,
        updateDialog: true
     }, (status) => {
+      for(var key in CodePush.SyncStatus) {
+        if(status === CodePush.SyncStatus[key]) {
+          this.setState({ logs: [...this.state.logs, key.replace(/_/g, '')]});
+          break;
+        }
+      }
 
     });
  }
@@ -53,6 +64,7 @@ export default class App extends Component<Props> {
             CodePush Sync
           </Text>
         </TouchableOpacity>
+        {this.state.logs.map((log, i) => <Text key={i}>{log}</Text>)}
       </View>
     );
   }
