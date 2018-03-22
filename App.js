@@ -66,7 +66,7 @@ export default class App extends Component<Props> {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Code Push updates QQQ
+          Code Push updates 555
         </Text>
         <Text style={styles.instructions}>
           To get started, edit App.js
